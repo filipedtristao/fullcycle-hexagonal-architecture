@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    hexagonal-architecture:
+        container_name: hexagonal-architecture
+        build:
+            context: .
+            dockerfile: Dockerfile
+            network: host
+        volumes:
+            - ./:/go/src
+        ports:
+            - "9000:9000"
